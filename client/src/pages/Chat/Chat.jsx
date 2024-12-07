@@ -11,7 +11,8 @@ import { io } from "socket.io-client";
 
 const Chat = () => {
   const dispatch = useDispatch();
-  const socket = useRef();
+  const socket = io('https://peerlink-ixns.onrender.com');
+
   const { user } = useSelector((state) => state.authReducer.authData);
 
   const [chats, setChats] = useState([]);
