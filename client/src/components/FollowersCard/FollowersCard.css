@@ -1,0 +1,142 @@
+.FollowersCard {
+    width: 100%;
+    border-radius: 0.7rem;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    max-height: 10rem;
+    background: var(--cardColor);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    overflow-y: auto;
+    scrollbar-width: thin;
+}
+
+.FollowersCard::-webkit-scrollbar {
+    width: 8px;
+}
+
+.FollowersCard::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.follower {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s ease;
+}
+
+.follower:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.follower > div {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.followerImage {
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.followerImage:hover {
+    transform: scale(1.05);
+}
+
+.name {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.name > span:nth-of-type(1) {
+    font-weight: bold;
+    font-size: 14px;
+    color: var(--textColor);
+}
+
+.name > span:nth-of-type(2) {
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.fc-button {
+    height: 2rem;
+    padding: 0 20px;
+    border-radius: 0.5rem;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    background: var(--primaryColor);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.fc-button:hover {
+    background: var(--primaryHoverColor);
+}
+
+.UnfollowButton {
+    color: var(--orange);
+    border: 2px solid var(--orange);
+    cursor: pointer;
+    background: transparent;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.UnfollowButton:hover {
+    background: var(--orange);
+    color: white;
+}
+
+.FollowersCard > span {
+    font-weight: bold;
+    color: orange;
+    align-self: center;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.FollowersCard > span:hover {
+    color: darkorange;
+}
+
+@media (max-width: 768px) {
+    .FollowersCard {
+        max-height: none;
+        padding: 0.5rem;
+    }
+
+    .followerImage {
+        width: 2.8rem;
+        height: 2.8rem;
+    }
+
+    .name > span:nth-of-type(1) {
+        font-size: 13px;
+    }
+
+    .name > span:nth-of-type(2) {
+        font-size: 11px;
+    }
+
+    .fc-button, .UnfollowButton {
+        font-size: 10px;
+        padding: 0 15px;
+    }
+}

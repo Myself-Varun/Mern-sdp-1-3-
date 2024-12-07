@@ -1,0 +1,14 @@
+.footer-wrapper a {
+    text-decoration: none;    /* Removes underline from links */
+    color: inherit;           /* Inherits the text color from the surrounding elements */
+  }
+  
+  .footer-wrapper a:hover {
+    color: inherit;           /* Prevents color change on hover */
+  }
+  
+  .footer-wrapper .footer-section-columns a {
+    display: block;           /* Makes each link block-level */
+    margin-bottom: 10px;      /* Adds spacing between the links */
+  }
+  

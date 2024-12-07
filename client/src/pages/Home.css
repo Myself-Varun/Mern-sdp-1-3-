@@ -1,0 +1,132 @@
+.Home {
+  position: relative;
+  display: grid;
+  grid-template-columns: 18rem auto 20rem;
+  gap: 1.5rem;
+  padding: 2rem;
+  background-color: var(--backgroundColor);
+  border-radius: 1rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.Home:hover {
+  transform: scale(1.02);
+}
+
+/* Left Side - Sidebar */
+.Home .Left-side {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background-color: var(--sidebarBg);
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.Home .Left-side a {
+  text-decoration: none;
+  color: var(--primaryTextColor);
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.Home .Left-side a:hover {
+  color: var(--hoverColor);
+}
+
+/* Middle Section - Main Content */
+.Home .Middle-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background-color: var(--cardColor);
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.Home .Middle-section > h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primaryTextColor);
+}
+
+.Home .Middle-section > p {
+  font-size: 1rem;
+  color: var(--secondaryTextColor);
+  line-height: 1.6;
+}
+
+/* Right Side - Suggestions / News */
+.Home .Right-side {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background-color: var(--sidebarBg);
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.Home .Right-side h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--primaryTextColor);
+}
+
+.Home .Right-side .news-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.Home .Right-side .news-item > a {
+  color: var(--secondaryTextColor);
+  font-size: 0.9rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.Home .Right-side .news-item > a:hover {
+  color: var(--hoverColor);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .Home {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .Home .Left-side, .Home .Right-side, .Home .Middle-section {
+    padding: 1rem;
+  }
+
+  .Home .Left-side a, .Home .Right-side .news-item > a {
+    font-size: 1rem;
+  }
+
+  .Home .Middle-section > h2 {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Home {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .Home .Left-side, .Home .Right-side, .Home .Middle-section {
+    padding: 0.8rem;
+  }
+
+  .Home .Left-side a, .Home .Right-side .news-item > a {
+    font-size: 0.9rem;
+  }
+
+  .Home .Middle-section > h2 {
+    font-size: 1.1rem;
+  }
+}

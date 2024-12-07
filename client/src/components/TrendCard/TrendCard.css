@@ -1,0 +1,64 @@
+.TrendCard {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background-color: var(--cardColor);
+    padding: 1.5rem 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    width: 100%;
+    max-width: 350px;
+}
+
+.TrendCard:hover {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    transform: scale(1.02);
+}
+
+/* Trend Section Styling */
+.trend {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Trend Title Styling */
+.trend > span:nth-of-type(1) {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--primaryColor);
+    transition: color 0.3s ease;
+}
+
+.trend > span:nth-of-type(1):hover {
+    color: var(--hoverPrimaryColor);
+}
+
+/* Trend Subtitle Styling */
+.trend > span:nth-of-type(2) {
+    font-size: 0.9rem;
+    color: var(--textColor);
+}
+
+/* Add a small divider line under the trend */
+.trend > hr {
+    border: 1px solid var(--hrColor);
+    margin: 0.5rem 0;
+}
+
+/* Responsive Design for Mobile Devices */
+@media (max-width: 768px) {
+    .TrendCard {
+        max-width: 90%;
+        padding: 1rem;
+    }
+
+    .trend > span:nth-of-type(1) {
+        font-size: 1rem;
+    }
+
+    .trend > span:nth-of-type(2) {
+        font-size: 0.85rem;
+    }
+}
