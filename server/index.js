@@ -22,6 +22,15 @@ mongoose.set('strictQuery', false); // Disable deprecation warnings (optional)
 // Middleware
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
+const server = require('http').createServer(app);
+const io = require('socket.io')(server, {
+    cors: {
+        origin: 'https://peerlinkf.onrender.com', // Update with your frontend URL
+        methods: ['GET', 'POST'],
+    },
+});
+
+ 
 app.use(cors());
 
 // To serve images inside the public folder
