@@ -40,7 +40,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/images', express.static(path.join(__dirname, 'images')));
 
 // MongoDB connection
-const PORT = process.env.PORT || 5000; // Provide a default port if env variable is missing
+const PORT = process.env.PORT || 7000; // Provide a default port if env variable is missing
 const CONNECTION = process.env.MONGODB_CONNECTION;
 
 mongoose
