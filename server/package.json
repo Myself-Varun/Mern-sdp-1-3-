@@ -1,7 +1,7 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "",
+  "description": "It's a backend server",
   "main": "index.js",
   "type": "module",
   "scripts": {
